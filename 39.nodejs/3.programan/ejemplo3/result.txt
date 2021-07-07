@@ -1,0 +1,12 @@
+La suma es : 
+ 32 + 13 = 45 
+ 
+La multiplicación es : 
+ 32 * 13 = 416 
+ 
+La resta es : 
+ 32 - 13 = 19 
+ 
+La división es : 
+ 32 / 13 = 2.4615384615384617 
+ 

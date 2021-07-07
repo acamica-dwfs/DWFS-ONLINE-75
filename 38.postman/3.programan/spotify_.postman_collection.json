@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "1df98491-2b41-48fa-8236-383a52fb20a2",
+		"name": "Programando",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api spotyfi",
+			"item": [
+				{
+					"name": "Obtener Tocken",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "04326c7fde9346c89af71fc3abd65516",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "b54b599bc28042f19a9623bf90822628",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://accounts.spotify.com/api/token",
+							"protocol": "https",
+							"host": [
+								"accounts",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"api",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Nuevo Lanzamientos",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer BQALL1igT2h99L4XBQUeq9s2P39xqF4Az7EEEBD316aPLFZaIvSjWdVFSOjMlz7-WyRSgbvYRnDCTYk_vSQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.spotify.com/v1/browse/new-releases",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"v1",
+								"browse",
+								"new-releases"
+							],
+							"query": [
+								{
+									"key": "Autorization",
+									"value": "BQALL1igT2h99L4XBQUeq9s2P39xqF4Az7EEEBD316aPLFZaIvSjWdVFSOjMlz7-WyRSgbvYRnDCTYk_vSQ",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener Albun por id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer BQDKZIyjPtP82ksHSrNohV_fFs5K6xbimuA-0acieO12hzQnkmHwxFs25u6QwGCN2XCzMAxbgvJucm_5nOHXi0xwp1rA7oTYhG0m60fqR0Gk6gAV-lBjTZjTQVWXTV-tKK5Ttxwzs7iMIT6M55TuBInn30oIWIo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.spotify.com/v1/albums/4aawyAB9vmqN3uQ7FjRGTy?market=es",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"v1",
+								"albums",
+								"4aawyAB9vmqN3uQ7FjRGTy"
+							],
+							"query": [
+								{
+									"key": "market",
+									"value": "es"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Mis Datos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Traer artista por Pais",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trae los disco por categoria",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer BQB9UV0hIv7gE2ejf6VLbVOosS1eZe8knBEwDRXzAjLQJgQQuytAGJ2zyAmawj3FXViDA-zMKijjbeDGQ9o",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://api.spotify.com/v1/browse/categories/rock/playlists",
+							"protocol": "https",
+							"host": [
+								"api",
+								"spotify",
+								"com"
+							],
+							"path": [
+								"v1",
+								"browse",
+								"categories",
+								"rock",
+								"playlists"
+							]
+						},
+						"description": "https://api.spotify.com/v1/browse/categories/{category_id}/playlists"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6a02c380-fefa-4c41-b544-6ee7001597dc",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "b7c4b2f5-90e8-4716-b2ea-1e86094ff9f0",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "restcountries",
+			"item": [
+				{
+					"name": "https://restcountries.eu/rest/v2/all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.eu/rest/v2/all",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"eu"
+							],
+							"path": [
+								"rest",
+								"v2",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://restcountries.eu/rest/v2/name/{name}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.eu/rest/v2/name/Argentina",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"eu"
+							],
+							"path": [
+								"rest",
+								"v2",
+								"name",
+								"Argentina"
+							]
+						},
+						"description": "obtengo los paises "
+					},
+					"response": []
+				},
+				{
+					"name": "https://restcountries.eu/rest/v2/capital/{capital}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.eu/rest/v2/capital/Buenos Aires",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"eu"
+							],
+							"path": [
+								"rest",
+								"v2",
+								"capital",
+								"Buenos Aires"
+							]
+						},
+						"description": "Muestro las Capitales"
+					},
+					"response": []
+				},
+				{
+					"name": "https://restcountries.eu/rest/v2/lang/{et}",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://restcountries.eu/rest/v2/lang/es",
+							"protocol": "https",
+							"host": [
+								"restcountries",
+								"eu"
+							],
+							"path": [
+								"rest",
+								"v2",
+								"lang",
+								"es"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
