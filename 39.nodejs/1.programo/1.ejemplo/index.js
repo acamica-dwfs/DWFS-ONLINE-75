@@ -8,20 +8,32 @@ var Lang = ['Pera', 'Banana', 'Limones'];
 //muestro las frutas
 console.log(Lang);
 
-Lang.map( element  => console.log(element))
+///   forecha vs  map
+console.log("con forEach")
+let  prueba =  Lang.forEach( element => element + "2")
+console.log(prueba)
 
-//verificamos cuantos items tiene el array
-var cant = Lang.length
-console.log(cant);
+//console.log("con map")
+let elementos = Lang.map( element =>  element+ "1")
+console.log(elementos)
 
-//Buscamos la fruta que esta antes de Banana
+
+console.log(elementos.length)
 
 var found = Lang.find(element => element > 'Banana');
 console.log(found);
 
+const prueba_acamcia = () => {
+    console.log(" prueba  acamica")
+}
 
-//agregamos un nueva fruta
-Lang.push('Naranja');
-console.log(Lang);
-console.log("acamica")
-// expected output: Array [ 'java', 'c', 'python', 'node' ]
+function  nodejs() {
+    console.log( "soy una funcion")
+}
+
+
+prueba_acamcia()
+nodejs()
+
+
+

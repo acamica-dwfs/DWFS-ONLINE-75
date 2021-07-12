@@ -1,4 +1,4 @@
-const User = require('./user_module.js');  //  importacion del modulo  o libreria
+const User = require('./user_module');  //  importacion del modulo  o libreria
 const person = new User(); //  declaro el objeto
 
 //Inprimo objeto completo
