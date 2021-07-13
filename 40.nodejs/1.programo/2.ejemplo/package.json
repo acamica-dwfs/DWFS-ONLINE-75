@@ -1,0 +1,25 @@
+{
+  "name": "1.programo",
+  "version": "1.0.0",
+  "description": "proyecto acamica",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "acamica",
+    "node"
+  ],
+  "author": "yaz",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "dotenv": "^8.6.0"
+  }
+}
