@@ -1,0 +1,19 @@
+{
+  "name": "acamica",
+  "version": "1.0.0",
+  "description": "ejemplo 1 npm",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "acamica",
+    "nodejs"
+  ],
+  "author": "yaz",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "moment": "^2.29.1"
+  }
+}
