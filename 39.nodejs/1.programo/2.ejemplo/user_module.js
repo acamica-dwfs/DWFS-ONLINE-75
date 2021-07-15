@@ -10,5 +10,6 @@ class User {
     }
 
 }
+
 //Exporto la  clase User
 module.exports = User; 
