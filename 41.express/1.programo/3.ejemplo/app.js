@@ -25,6 +25,13 @@ app.post("/telefono", (req, res) => {
 })
 
 
+app.get("/telefono/:id", , (req, res) => {
+    const {id} =  req.params;
+
+})
+
+
+
 app.listen(PORT, () => {
     console.log("aplicacion funcionando en el localhost:" + PORT)
 })

@@ -1,0 +1,25 @@
+{
+  "telefonos": [
+    {
+      "id": 1,
+      "marca": "Noxia",
+      "modelo": "1100",
+      "pantalla": "TFT de 6.5",
+      "sistema_operativo": "Android 9.0 Pie."
+    },
+    {
+      "id": 2,
+      "marca": "Samsung",
+      "modelo": "Galaxy A20",
+      "pantalla": "TFT de 6.5",
+      "sistema_operativo": "Android 9.0 Pie."
+    },
+    {
+      "id": 3,
+      "marca": "Alcatel",
+      "modelo": "One",
+      "pantalla": "TFT de 5.5",
+      "sistema_operativo": "Android 5.0 Pie."
+    }
+  ]
+}
