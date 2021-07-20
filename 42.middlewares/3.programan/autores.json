@@ -1,0 +1,44 @@
+{
+  "autores": [
+    {
+      "id": 1,
+      "nombre": "Diego",
+      "apellido": "Cabulo",
+      "fechaDeNacimiento": "24/08/1899",
+      "libros": [
+        {
+          "id": 1,
+          "titulo": "Del amor y ...",
+          "descripcion": "Ejemplo de un libro escrito por Diego C.",
+          "anioPublicacion": 2000
+        },
+        {
+          "id": 2,
+          "titulo": "Don Quijote ...",
+          "descripcion": "Ejemplo de un libro escrito por Diego C.",
+          "anioPublicacion": 2005
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nombre": "Angela",
+      "apellido": "Cabulo",
+      "fechaDeNacimiento": "24/08/1899",
+      "libros": [
+        {
+          "id": 1,
+          "titulo": "El libro de angela...",
+          "descripcion": "Ejemplo de un libro escrito por Diego C.",
+          "anioPublicacion": 2000
+        },
+        {
+          "id": 2,
+          "titulo": "Don Quijote ...",
+          "descripcion": "Ejemplo de un libro escrito por Diego C.",
+          "anioPublicacion": 2005
+        }
+      ]
+    }
+  ]
+}
