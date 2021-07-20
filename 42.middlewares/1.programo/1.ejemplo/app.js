@@ -2,31 +2,33 @@ const express = require("express");
 const app  = express();
 const port = 3000;
 
+app.use(express.json()); //middleware global para soportar envio de json desde el cliente
 /**
  *  validar el usuario
  */
-const middlewareGlobal =  (req, res, next) => {
-    let {usuario, password} =  req.query;
+const  middlewareEspefico  =  (req, res, next) => {
+    let {usuario, password} =  req.body;
     if(usuario !== 'yaz' || password !== '12345' ){
-        res.status(400).send({ status :  false ,  msg : "login  incorrecto"})
-    } else {
-        next();
+        return  res.status(401).send({ status :  false ,  msg : "login  incorrecto"})
     }
+    next();
 }
 
-const middlewareEspefico = (req, res, next) => {
+const middlewareGlobal = (req, res, next) => {
     console.log(" hola, como estan  ?");
     next();
 }
 
+app.post("/login",middlewareEspefico, (req, res) => {
+    res.status(200).send({"ok" :  true ,  msg : "login  correcto"})
+})
+
 
 app.use(middlewareGlobal); //  global
 
-app.get("/login", (req, res) => {
-    res.status(200).send({"ok" :  true})
-})
 
-app.get('/', middlewareEspefico , (req, res) => {
+
+app.get('/' , (req, res) => {
     res.send(" hola acamica");
 })
 
