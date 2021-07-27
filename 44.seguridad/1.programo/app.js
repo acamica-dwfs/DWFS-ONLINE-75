@@ -7,6 +7,7 @@ const helmet = require('helmet');
 var bodyParser = require('body-parser');
 //npm install --save express-rate-limit
 const rateLimit = require("express-rate-limit");
+const  bcrypt =  require('bcryptjs')
 
 app.use(helmet());
 
@@ -31,11 +32,11 @@ app.set('trust proxy', function (ip) {
 
 const limiter = rateLimit({
     windowMs: 15 * 60 * 1000, // 15 minutos
-    max: 100 // limita cada IP a 100 solicitudes por ventanas
+    max: 15 // limita cada IP a 100 solicitudes por ventanas
 });
 
 //Aplicamos el middleware para las restricciones
-app.use(limiter);
+//app.use(limiter);
 
 app.listen(port, () => {
     console.log(`Server listeting on port ${port}`)
@@ -54,6 +55,20 @@ limiter({
 
 
 
-app.get('/api/action', function (req, res) {
+app.get('/api/action',  (req, res)=> {
+    const pass =  "14234124124"
+    const passwordHash = bcrypt.hashSync(pass, 10);
+    console.log("password con hash :")
+    console.log(passwordHash)
+    console.log("verificacion")
+    const verified = bcrypt.compareSync(pass+"123", passwordHash);
+    console.log(verified)
     res.send(200, 'ok')
 })
+
+
+
+app.get('/api/acamica',  (req, res) => {
+    res.send(200, 'ok acamica')
+})
+
