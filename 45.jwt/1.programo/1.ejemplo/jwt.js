@@ -26,19 +26,18 @@ const validarAdmin = (req, res, next) => {
 
 // GENERAMOS TOKEN
 app.post("/login", (req, res) => {
-    const (user , pass ) = req.body
+    const {user , pass } = req.body
     if( user === "yaz"  && pass === "1234"){
-        const json =  {  user : user, type : "admin"}
+        const json =  {  user : user, type : "cliente"}
         const token = jwt.sign(json, KEY, { expiresIn: '1h' });
-        res.status(200).json(){ token : token}})
+        res.status(200).json({ token : token})
     } else {
-    res.status(404).json(){ msg: "login invalido"}})
+    res.status(404).json({ msg: "login invalido"})
    }
 })
 
 app.get("/ordenes", validarAdmin,  (req, res) =>{
-    res.status(200).json(){ msg: "todas las ordenes"}})
+    res.status(200).json({ msg: "todas las ordenes"})
 })
-
 
 app.listen(3000);
