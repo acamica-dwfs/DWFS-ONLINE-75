@@ -28,7 +28,7 @@ const validarAdmin = (req, res, next) => {
 app.post("/login", (req, res) => {
     const {user , pass } = req.body
     if( user === "yaz"  && pass === "1234"){
-        const json =  {  user : user, type : "cliente"}
+        const json =  {  user : user, type : "admin"}
         const token = jwt.sign(json, KEY, { expiresIn: '1h' });
         res.status(200).json({ token : token})
     } else {

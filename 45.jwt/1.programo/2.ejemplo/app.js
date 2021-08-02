@@ -21,7 +21,6 @@ const validateJwtMiddleware = (req, res, next) => {
 };
 
 // app.use(validateJwtMiddleware);
-
 app.post("/api/v1/acamica/user", validateJwtMiddleware, (req, res) => {
     return res.status(200).json(req.body);
 });
