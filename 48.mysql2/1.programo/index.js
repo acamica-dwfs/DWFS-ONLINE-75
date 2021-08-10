@@ -3,18 +3,16 @@ var app = express();
 const sequelize = require('./conexion.js');
 
 
-async function findAllRows() {
-    sequelize.query("SELECT * FROM restaurant limit 3", { type: sequelize.QueryTypes.SELECT })
-        .then(result => {
-            console.log(result);
-        }).catch( e => {
-            console.log("error  en la insercion " + e)
-        })
-}
+app.get("/listar", async (req, res) => {
+   try {
+       const  data = await sequelize.query("SELECT * FROM restaurant limit 3", { type: sequelize.QueryTypes.SELECT })
+       res.status(200).json({data : data})
+   }catch (e){
+       console.log( "ha ocurrido un error" + e)
+       res.status(400).json({msq: "ha ocurrido un error nsertado"})
+   }
+})
 
-findAllRows();
-
-
-app.listen(3000, function () {
+app.listen(4000, function () {
     console.log('Sistema armado en el puerto 3000!');
 });
