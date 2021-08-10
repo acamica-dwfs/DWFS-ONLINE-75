@@ -1,0 +1,354 @@
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0
+}
+body{
+    overflow-x: hidden;
+}
+/* navBar */
+header{
+    width:100%;
+    height: 70px;
+    background-color: #263238;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:0px 5px 16px 0px #757575;
+}
+.navbar{
+    display: flex;
+    justify-content: center;  
+}
+li{
+    list-style: none;
+    display: inline;
+    margin: 50px;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    transition: all .2s ease-in-out;
+}
+a:hover{
+    color: orange;
+}
+/* navBar */
+
+/* Home */
+h1{
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 40px;
+}
+.img_home{
+    position: relative;
+    top: 70px;
+    margin: auto;
+    width: 300px
+}
+img{
+    width:300px
+}
+.subtitle_home{
+    position: relative;
+    margin: auto;
+    top: 80px;
+    width:400px;
+}
+h2{
+    font-size:20px;
+    text-align: center;
+}
+/* Home */
+
+/* Form */
+form{
+    height: 370px;
+    width: 500px;
+    position: relative;
+    margin: auto;
+    top: 100px;  
+}
+.container_inputs{
+    position: relative;
+    display: block;
+    background-color: transparent;
+    border: solid 1px gray;
+    margin-bottom: 12px;
+    width: 100%;
+    border-radius: 5px;
+    height: 40px;
+}
+.inpt{
+    display: block;
+    background-color: transparent;
+    margin-bottom: 20px;
+    width: 300px;
+    border:none;
+    height: 40px;
+    outline: none;
+    left: 20px;
+    position: relative;
+}
+input::placeholder{
+    color: #263238;
+  
+}
+.btn{
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    position:absolute;
+    color: white;
+    bottom: 0px;
+    background-color: #263238;
+    font-size:25px;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: orange;
+    color: #263238;
+}
+.imgUpload{
+    position: absolute;
+    bottom:80px;
+    outline: none;
+}
+.fcha{
+    position:absolute;
+    bottom: 0;
+    right: 15px;
+}
+/* Form */
+
+/* Bandas creadas */
+.container_bandas_flex{
+    width:90%;
+    position:relative;
+    margin:auto;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.container_banda{
+    position: relative;
+    margin: 20px;
+    width: 300px;
+    height: 380px;
+    border-radius: 5px;
+    box-shadow:0px 5px 16px 0px #757575;
+}
+.container_img_banda{
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/musician-664432_1280.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+}
+.info_banda{
+    width:90%;
+    height: 100px;
+    position: relative;
+    top: 210px;
+    margin: auto;
+}
+.btn_ver_banda{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    border:none;
+    background-color: #263238;
+    height: 30px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.btn_ver_banda:hover{
+    outline: none;
+    background-color: orange;
+    color: #263238;
+}
+p{
+    display: block;
+    margin-bottom: 3px;
+}
+/* Bandas creadas */
+
+/* Info banda MAX */
+.container_info_banda_max{
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    height: 1000px;
+    background-color: white;
+    z-index: 1;
+}
+.img_info_banda_max{
+    position: relative;
+    left: 120px;
+    border-radius: 20px;
+    top: 40px;
+    background-image: url(../img/musician-664432_1280.jpg);
+    background-size: 450px;
+    background-position: center;
+    width: 300px;
+    height: 300px;
+    box-shadow:0px 5px 16px 0px #757575;
+}
+.fa-times-circle{
+    font-size: 40px;
+    position:absolute;
+    right: 40px;
+    z-index: 5;
+    top: -30px;
+    cursor: pointer;
+    color: #263238;
+    transition: all .2s ease-in-out;
+}
+.fa-times-circle:hover{
+    color: red;
+}
+.containerH3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 400px;
+    top: 30px;
+    width: 300px;
+    height: 300px;
+}
+
+.container_table_canciones{
+    position: relative;
+    top: 100px;
+    left: 20px;
+}
+.container_table_albumes{
+    left: 20px;
+    position: relative;
+    top: 190px;
+}
+.add-songs{
+    position: relative;
+    left: 30px;
+    width: 90%;
+    top: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #263238;
+    color: white;
+    transition: all .2s ease-in-out;
+}
+.add-songs:hover{
+    background-color:orange;
+    color: #263238;
+}
+.Editar{
+    position: relative;
+    left: 100px;
+    background-color: orange;
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    color: white;
+}
+.Editar:hover{
+    background-color: yellow;
+    color:#263238;
+}
+.none{
+    display:none;
+}
+
+/* Info banda MAX */
+
+/* Create songs */
+.form-add-songs{
+    position: fixed;
+    width: 100%;
+    height: 1000px;
+    top: 0px;
+    background-color: white;
+    z-index: 2;
+}
+.fas{
+    position: absolute;
+    right: 100px;
+    top: 30px;
+}
+h5{
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 35px;
+}
+.btn-eliminar{
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    color: white;
+    bottom: 0;
+    font-size:25px;
+    cursor: pointer;
+    position: relative;
+    top: 90px;
+    background-color: red;
+}
+.btn-actuliazar{
+    outline: none;
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    border: none;
+    color: white;
+    bottom: 0;
+    font-size:25px;
+    cursor: pointer;
+    position: relative;
+    top: 90px;
+    background-color: #263238;
+}
+.up{
+    top: 270px;
+}
+/* Create songs */
+
+/* Update album */
+.albumUdate{
+    position: relative;
+    top: 20px;
+}
+.removeAlbum{
+    position: relative;
+    top: 30px;
+}
+/* Update album */
+
+.eliminarBandabtn{
+    position: relative;
+    top: 250px;
+    width: 90%;
+    left: 50px;
+}
+
+h6{
+    text-align: center;
+    font-size: 30px;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4afa00a4af.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bandas</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu_li"><a class="menu_li_link" href="index.html">Home</a></li>
+                <li class="menu_li"><a class="menu_li_link" href="crear.html">Crear</a></li>
+                <li class="menu_li"><a class="menu_li_link" href="bandas.html">Bandas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Llena este formulario con la <br> información de tu banda favorita</h1>
+    <form id="formularioCreacionBanda" autocomplete="off"  method="POST" >
+        
+        <div class="container_inputs">
+            <input name="nombre"  class="inpt"  type="text" placeholder="Nombre de la banda" autocomplete="off"> 
+        </div>
+        <div class="container_inputs">
+            <input name="Nº_integrantes" class="inpt"  type="number" placeholder="Número de integrantes"> 
+        </div>
+        <div class="container_inputs">
+            <input name="fecha_start" class="inpt"  type="date"> 
+            <p class="fcha">fecha de creación</p>
+        </div>
+        <div class="container_inputs">
+            <input name="fecha_end"  class="inpt" type="date"> 
+            <p class="fcha">fecha de separación</p>
+        </div>
+        <div class="container_inputs">
+            <input name="pais" class="inpt"  type="text" placeholder="País">
+        </div>
+        
+        <input name="URLimg" class="imgUpload"  type="file">
+        <button type="submit" class="btn">crear</button>
+     
+    </form>
+
+    <script src="./js/form.js"></script>
+</body>
+</html>

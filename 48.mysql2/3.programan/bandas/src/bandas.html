@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;1,200&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4afa00a4af.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bandas</title>
+</head>
+<body id="body">
+    <header>
+        <nav class="navbar">
+            <ul class="menu">
+                <li class="menu_li"><a class="menu_li_link" href="index.html">Home</a></li>
+                <li class="menu_li"><a class="menu_li_link" href="crear.html">Crear</a></li>
+                <li class="menu_li"><a class="menu_li_link" href="bandas.html">Bandas</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Tus bandas creadas</h1>
+
+    <div id="addContainerAlbum" class="form-add-songs none">
+        <i id="bntCloseAlbumAdd" class="fas fa-times-circle"></i>
+        <h5>Agregar albumes</h5>
+        <form id="formAddAlbum" method="POST" action="" autocomplete="off">
+            <div class="container_inputs">
+                <input name="nombre_album" class="inpt"  type="text" placeholder="Nombre del Album"> 
+            </div>
+            <div class="container_inputs">
+                <input name="banda" class="inpt"  type="text" placeholder="Banda"> 
+            </div>
+
+            <div class="container_inputs">
+                <input name="fecha_publicacion" class="inpt" type="date" placeholder="Banda"> 
+                <p class="fcha">fecha de publicación</p>
+            </div>
+    
+           <input class="btn albumUdate" type="submit" value="Agregar">
+        </form>
+    </div>
+
+    <div id="updateContainerAlbum" class="form-add-songs none">
+        <i id="bntCloseAlbum" class="fas fa-times-circle"></i>
+        <h5>Actualiza o elimina los albumes</h5>
+        <form  id="formUpdateDeleteAlbum" action="" autocomplete="off">
+            <div class="container_inputs">
+                <input name="nombre_album" id="nombreAlbum" class="inpt"  type="text" placeholder="Nombre del Album"> 
+            </div>
+            <div class="container_inputs">
+                <input name="banda" id="bandaAlbum" class="inpt"  type="text" placeholder="Banda"> 
+            </div>
+
+            <div class="container_inputs">
+                <input name="fecha_publicacion" id="fechaAlbum"  class="inpt" type="date"> 
+                <p class="fcha">fecha de publicación</p>
+            </div>
+
+            <button  id="UpdateAlbum" class="btn albumUdate" type="submit">Actualizar</button>
+            <button id="deleteAlbum" class="btn-eliminar removeAlbum" type="submit">Eliminar</button>
+    
+        </form>
+    </div>
+
+    <div id="updateContainerSongs" class="form-add-songs none">
+        <i id="bntCloseEliminarSongs" class="fas fa-times-circle"></i>
+        <h5>Actualiza o elimina las canciones</h5>
+        <form id="updateSongsForm" action="" autocomplete="off">
+            <div class="container_inputs">
+                <input id="name"  name="nombre" class="inpt"  type="text" placeholder="Nombre de la canción" value=""> 
+            </div>
+            <div class="container_inputs">
+                <input id="tiempo_duracion" name="tiempo_duracion" class="inpt"  type="text" placeholder="Duración" value=""> 
+            </div>
+            <div class="container_inputs">
+                <input id="album" name="album" class="inpt"  type="text" placeholder="Album" value=""> 
+            </div>
+            <div class="container_inputs">
+                <input id="banda" name="banda" class="inpt" type="text" placeholder="Banda" value=""> 
+            </div>
+            <div class="container_inputs">
+                <input id="fecha_public" name="fecha_public" class="inpt" type="date" placeholder="Banda" value=""> 
+                <p class="fcha">fecha de publicación</p>
+            </div>
+           
+            <button  id="updateSong" class="btn up" type="submit">Actualizar</button>
+            <button  id="deleteSong" class="btn-eliminar">Eliminar</button>
+
+        </form>
+    </div>
+
+    <div id="containerAddSongs" class="form-add-songs none">
+        <i id="iconExitAddSongs" class="fas fa-times-circle"></i>
+        <h5>Crea las canciones de tu banda</h5>
+        <form id="crearSongs"  method="POST" autocomplete="off">
+            <div class="container_inputs">
+                <input name="nombre" class="inpt"  type="text" placeholder="Nombre de la canción"> 
+            </div>
+            <div class="container_inputs">
+                <input name="tiempo_duracion" class="inpt"  type="text" placeholder="Duración"> 
+            </div>
+            <div class="container_inputs">
+                <input name="album" class="inpt"  type="text" placeholder="Album"> 
+            </div>
+            <div class="container_inputs">
+                <input name="banda" class="inpt" type="text" placeholder="Banda"> 
+            </div>
+            <div class="container_inputs">
+                <input name="fecha_public" class="inpt" type="date"> 
+                <p class="fcha">fecha de publicación</p>
+            </div>
+       
+            <button type="submit" class="btn">crear</button>
+        </form>
+    </div>
+
+    <div id="containerBandasMax" class= "container_info_banda_max none">
+        <div class="container_info_banda_max">
+            <i id="iconExit" class="fas fa-times-circle"></i>
+            <div class="containerH3"></div>
+            <div class="img_info_banda_max"></div>
+            <div class="container_table_canciones">
+                <h4>Canciones</h4>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Duración</th>
+                            <th scope="col">Fecha</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableCanciones">
+                    </tbody>
+                </table>
+                <button id="addSongs" href="#body" class="add-songs">Agregar canciones</button>
+            </div>
+            <div class="container_table_albumes">
+               <h4>Albumes</h4>
+                <table  class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Banda</th>
+                        <th scope="col">Fecha</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tableAlbum">
+                    </tbody>
+                </table>
+                <button id="addAlbum" class="add-songs">Agregar Album</button>
+            </div>
+            <button id="deleteBanda" class="btn-eliminar eliminarBandabtn">Eliminar banda</button>
+            
+        </div>
+    </div>
+
+    <section id= "containerBandasCreadas" class="container_bandas_flex">
+        <div class="mensajeCreaTuBanda" id="mensajeCreaTuBanda">
+            <div class="imgCreaTuBanda">
+                <img src="./img/Wavy_Bus-04_Single-04.jpg" alt="">
+            </div>
+            <h6>Agrega tu primera banda</h6>
+        </div>
+    </section>
+    <script src="./js/bandas.js"></script>
+</body>
+</html>
