@@ -1,16 +1,13 @@
 const Sequelize = require('sequelize');
-const path = 'mysql://root:@localhost:3306/resto';
+const path = 'mysql://user_resto:qwerty1234@localhost:3306/resto';
 const sequelize = new Sequelize(path, {
-    operatorsAliases: false ,
-    logging: false,
+    logging: true
 });
 
 sequelize.authenticate().then(() => {
     console.log('Conectado.');
 }).catch(err => {
     console.error('Error de conexion:', err);
-}).finally(() => {
-    sequelize.close();
 });
 
 module.exports = sequelize;
