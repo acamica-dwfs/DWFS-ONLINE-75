@@ -110,3 +110,8 @@ LEFT JOIN cursos c using(id_curso)
 where  e.id_estudiante = 2 and e.nombre = 'aldana'
 
 
+SELECT  sum(edad)/count(*)
+FROM  estudiantes
+LEFT JOIN pais using(id_pais)
+
+
